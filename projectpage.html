@@ -3,79 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rain Detector from Photographs</title>
+    <title>Green Light Detector - Project Overview</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
         }
         .container {
-            max-width: 800px;
+            width: 80%;
             margin: auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
-        h1 {
-            text-align: center;
-            color: #444;
+        .main {
+            background: #fff;
+            padding: 2rem;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #333;
         }
         p {
-            margin-bottom: 20px;
+            margin: 0.5rem 0;
         }
-        code {
-            background-color: #eee;
-            padding: 2px 5px;
-            border-radius: 3px;
-            color: #c7254e;
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Green Light Detector Project</h1>
+    </header>
+
     <div class="container">
-        <h1>Rain Detector from Photographs</h1>
-        <p>Welcome to my project webpage! This project is focused on creating a rain detector using computer vision techniques. By analyzing photographs, this tool can determine whether it is raining or not.</p>
-        
-        <h2>Project Overview</h2>
-        <p>This rain detector is built using <code>Python</code> and various computer vision libraries. The goal of the project is to automatically detect rain in images, which can be useful in several real-world applications such as:</p>
-        <ul>
-            <li>Improving weather prediction models by providing real-time data.</li>
-            <li>Enhancing autonomous vehicle navigation by recognizing rainy conditions.</li>
-            <li>Optimizing the performance of outdoor surveillance systems by detecting adverse weather conditions.</li>
-        </ul>
-        
-        <h2>How It Works</h2>
-        <p>The rain detector uses image processing techniques to analyze photographs and identify patterns typically associated with rain, such as streaks or blurry regions caused by raindrops. Here's a simplified workflow:</p>
-        <ol>
-            <li>Preprocess the image to enhance features associated with rain.</li>
-            <li>Apply machine learning models trained to recognize rain patterns.</li>
-            <li>Classify the image as "rainy" or "not rainy."</li>
-        </ol>
-        
-        <h2>Why a Rain Detector?</h2>
-        <p>Detecting rain in photographs is not just a fun challenge—it has significant practical value:</p>
-        <ul>
-            <li><strong>Weather Forecasting:</strong> Rain detectors can supplement traditional meteorological methods by providing additional data points, especially in regions where weather stations are sparse.</li>
-            <li><strong>Autonomous Vehicles:</strong> Recognizing rainy conditions is critical for adjusting driving strategies, ensuring safety, and improving the reliability of autonomous systems.</li>
-            <li><strong>Outdoor Surveillance:</strong> In security systems, detecting rain can trigger the system to adjust camera settings or notify operators, improving the overall quality of monitoring.</li>
-        </ul>
-        
-        <h2>Tools and Technologies</h2>
-        <p>This project leverages the following technologies:</p>
-        <ul>
-            <li><code>Python</code>: The core programming language used for data processing and analysis.</li>
-            <li><code>OpenCV</code>: A powerful computer vision library used for image processing.</li>
-            <li><code>TensorFlow</code> / <code>PyTorch</code>: Deep learning frameworks used to train the rain detection model.</li>
-        </ul>
-        
-        <h2>Project Repository</h2>
-        <p>You can find the complete code and detailed documentation in my <a href="https://github.com/your-username/rain-detector" target="_blank">GitHub repository</a>.</p>
-        
-        <p>Thank you for visiting my project page! Feel free to explore the code and contribute to the project.</p>
+        <div class="main">
+            <h2>Introduction</h2>
+            <p>
+                Welcome to the Green Light Detector project page. This project focuses on developing a computer vision tool capable of detecting green lights from photographs using Python. This application leverages image processing techniques to identify green light signals in various settings.
+            </p>
+
+            <h2>Project Details</h2>
+            <p>
+                The Green Light Detector is built using Python and popular libraries such as OpenCV and NumPy. The system processes images to detect the presence of green lights by analyzing color patterns and light intensity. The detector is designed to work in real-time, making it suitable for various applications including traffic management, automated systems, and safety monitoring.
+            </p>
+
+            <h2>Utility of a Green Light Detector</h2>
+            <p>
+                The green light detector has multiple practical uses:
+            </p>
+            <ul>
+                <li><strong>Traffic Management:</strong> Automate traffic signal recognition to ensure smooth traffic flow and enhance safety.</li>
+                <li><strong>Automated Systems:</strong> Integrate into systems that require real-time light detection for automated responses.</li>
+                <li><strong>Safety Monitoring:</strong> Monitor environments where green lights indicate safety or operational status, reducing the need for manual checks.</li>
+            </ul>
+
+            <h2>How It Works</h2>
+            <p>
+                The green light detection process involves the following steps:
+            </p>
+            <ol>
+                <li><strong>Image Acquisition:</strong> Capture images using a camera or load pre-existing images.</li>
+                <li><strong>Color Filtering:</strong> Use color filtering techniques to isolate green hues from the image.</li>
+                <li><strong>Detection:</strong> Analyze the filtered image to detect the presence of green light based on intensity and coverage.</li>
+                <li><strong>Output:</strong> Provide results indicating whether a green light is detected or not.</li>
+            </ol>
+        </div>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Green Light Detector Project. All rights reserved.</p>
+    </footer>
 </body>
 </html>
