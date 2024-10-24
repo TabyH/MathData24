@@ -16,7 +16,7 @@
         body {
             font-family: 'Open Sans', sans-serif;
             line-height: 1.7;
-            background-color: #7fa37c;
+            background-color: #f9f9f9;
             color: #333;
         }
 
@@ -31,9 +31,23 @@
             background: #005A32;
             color: white;
             padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo svg {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        header .logo h1 {
             font-family: 'Montserrat', sans-serif;
             font-size: 32px;
             font-weight: 600;
@@ -213,7 +227,14 @@
 <body>
     <header>
         <div class="container">
-            <h1 class="logo">Nature Shield AI</h1>
+            <div class="logo">
+                <!-- Inline SVG logo -->
+                <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="25" fill="#005A32" />
+                    <path fill="#FFDD00" d="M25 15c-5 0-9 4-9 9 0 4 3 7 6 8v9h-4c-1 0-2 1-2 2v4h20v-4c0-1-1-2-2-2h-4V32c3-1 6-4 6-8 0-5-4-9-9-9zm0 6c1 0 3 1 3 3 0 2-1 3-3 3s-3-1-3-3c0-2 1-3 3-3z"/>
+                </svg>
+                <h1>Nature Shield AI</h1>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
@@ -272,8 +293,4 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Nature Shield AI. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+            <p>&copy
