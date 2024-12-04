@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedAlert AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            margin: 0 auto;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        #home {
+            background-color: #f4f4f4;
+        }
+        #about {
+            background-color: #eef;
+        }
+        #features {
+            background-color: #efe;
+        }
+        #contact {
+            background-color: #fee;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+        form {
+            margin: 0 auto;
+            max-width: 400px;
+            text-align: left;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        form button {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RedAlert AI</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to RedAlert AI</h2>
+        <p>Revolutionizing road safety with AI-powered traffic light prediction systems.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At RedAlert AI, we are dedicated to making roads safer with cutting-edge technology. 
+            Our team of experts specializes in AI systems that predict traffic light changes to 
+            help prevent accidents and improve driving safety.</p>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li>✅ Real-time traffic light prediction</li>
+            <li>✅ AI-driven alerts to prevent accidents</li>
+            <li>✅ Easy integration with modern vehicles</li>
+            <li>✅ Works in all weather conditions</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 RedAlert AI. All rights reserved.</p>
+    </footer>
+</body>
+</html>
