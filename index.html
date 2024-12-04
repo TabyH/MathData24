@@ -3,294 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nature Shield AI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+    <title>RedAlert AI</title>
     <style>
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.7;
-            background-color: #7fa37c;
             color: #333;
+            background-color: #f4f4f4;
         }
-
-        .container {
-            width: 85%;
-            margin: auto;
-            max-width: 1200px;
-            overflow: hidden;
-        }
-
         header {
-            background: #005A32;
+            background-color: #333;
             color: white;
-            padding: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-
-        header .logo {
-            display: flex;
-            align-items: center;
+        nav {
+            margin: 0 auto;
         }
-
-        header .logo svg {
-            width: 50px;
-            height: 50px;
-            margin-right: 15px;
-        }
-
-        header .logo h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 32px;
-            font-weight: 600;
-        }
-
-        header nav {
-            float: right;
-        }
-
-        header nav ul {
-            list-style: none;
-        }
-
-        header nav ul li {
-            display: inline;
-            margin-left: 25px;
-        }
-
-        header nav ul li a {
+        nav a {
             color: white;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
-
-        header nav ul li a:hover {
-            color: #FFDD00;
-        }
-
-        #hero {
-            background: url('forest.jpg') no-repeat center center/cover;
-            height: 90vh;
-            color: white;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        #hero h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        #hero p {
-            font-size: 22px;
-            margin-bottom: 40px;
-            max-width: 600px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #FFDD00;
-            color: #333;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 18px;
-            font-weight: 600;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #333;
-            color: #FFDD00;
-        }
-
-        .section {
-            padding: 80px 0;
-            background: white;
-            text-align: center;
-        }
-
-        .section h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 36px;
-            margin-bottom: 40px;
-        }
-
-        .section p {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 30px;
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-        }
-
-        .service {
-            margin-bottom: 60px;
-        }
-
-        .service h3 {
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-
-        .service p {
+            margin: 0 15px;
             font-size: 16px;
-            color: #555;
-            margin-bottom: 20px;
         }
-
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        #home {
+            background-color: #f4f4f4;
+        }
+        #about {
+            background-color: #eef;
+        }
+        #features {
+            background-color: #efe;
+        }
+        #contact {
+            background-color: #fee;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
         form {
-            max-width: 600px;
-            margin: auto;
-            background: #f4f4f4;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            max-width: 400px;
+            text-align: left;
         }
-
-        form input, form textarea {
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        form input, form textarea, form button {
             width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            font-size: 16px;
+            padding: 10px;
+            margin: 5px 0;
         }
-
         form button {
-            padding: 12px 30px;
-            background: #005A32;
+            background-color: #333;
             color: white;
             border: none;
             cursor: pointer;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 50px;
-            transition: background 0.3s ease;
         }
-
         form button:hover {
-            background: #003f22;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        /* Add responsive design */
-        @media (max-width: 768px) {
-            header nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-
-            header nav {
-                float: none;
-                text-align: center;
-            }
-
-            #hero h2 {
-                font-size: 36px;
-            }
-
-            .container {
-                width: 95%;
-            }
-
-            form {
-                padding: 20px;
-            }
+            background-color: #555;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <!-- Inline SVG logo -->
-                <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="25" cy="25" r="25" fill="#005A32" />
-                    <path fill="#FFDD00" d="M25 15c-5 0-9 4-9 9 0 4 3 7 6 8v9h-4c-1 0-2 1-2 2v4h20v-4c0-1-1-2-2-2h-4V32c3-1 6-4 6-8 0-5-4-9-9-9zm0 6c1 0 3 1 3 3 0 2-1 3-3 3s-3-1-3-3c0-2 1-3 3-3z"/>
-                </svg>
-                <h1>Nature Shield AI</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>RedAlert AI</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <section id="hero">
-        <div class="container">
-            <h2>Protecting Nature with AI</h2>
-            <p>We use AI-powered insights to monitor forests, track deforestation, and predict wildfire risks.</p>
-            <a href="#services" class="btn">Learn More</a>
-        </div>
+    <section id="home">
+        <h2>Welcome to RedAlert AI</h2>
+        <p>Revolutionizing road safety with AI-powered traffic light prediction systems.</p>
     </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Nature Shield AI is a technology startup focused on preserving natural ecosystems. We leverage advanced AI and computer vision technologies to provide real-time insights from satellite and drone imagery. Our mission is to assist agencies and forest managers in preventing wildfires and protecting biodiversity.</p>
-        </div>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At RedAlert AI, we are dedicated to making roads safer with cutting-edge technology. 
+            Our team of experts specializes in AI systems that predict traffic light changes to 
+            help prevent accidents and improve driving safety.</p>
     </section>
 
-    <section id="services" class="section">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service">
-                <h3>Deforestation Tracking</h3>
-                <p>Analyze deforestation patterns with our AI-powered monitoring tools using real-time satellite data.</p>
-            </div>
-            <div class="service">
-                <h3>Wildfire Prediction</h3>
-                <p>Prevent wildfires by predicting risk areas using predictive models based on environmental factors.</p>
-            </div>
-            <div class="service">
-                <h3>Drone Imagery Analysis</h3>
-                <p>Get deep insights into specific areas of forests with detailed drone imagery and AI-driven analytics.</p>
-            </div>
-        </div>
+    <section id="features">
+        <h2>Features</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li>✅ Real-time traffic light prediction</li>
+            <li>✅ AI-driven alerts to prevent accidents</li>
+            <li>✅ Easy integration with modern vehicles</li>
+            <li>✅ Works in all weather conditions</li>
+        </ul>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Reach out to learn more about how we can help protect forests and wildlife.</p>
-            <form action="#" method="post">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy
+        <p>&copy; 2024 RedAlert AI. All rights reserved.</p>
+    </footer>
+</body>
+</html>
